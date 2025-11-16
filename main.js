@@ -10,7 +10,7 @@ import { OrbitControls } from 'three/controls/OrbitControls.js';
 import { EffectComposer } from 'three/postprocessing/EffectComposer.js';
 import { RenderPass } from 'three/postprocessing/RenderPass.js';
 import { ShaderPass } from 'three/postprocessing/ShaderPass.js';
-import { createNoise2D } from 'simplex-noise';
+//import { createNoise2D } from 'simplex-noise';
 import Stats from 'stats.js';
 
 
