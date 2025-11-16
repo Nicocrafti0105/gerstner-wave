@@ -1,10 +1,18 @@
-import * as THREE from './node_modules/three/src/Three.js';
-import { createNoise2D } from './node_modules/simplex-noise/simplex-noise.ts';
-import { OrbitControls } from './node_modules/three/examples/jsm/controls/OrbitControls.js';
-import { EffectComposer } from './node_modules/three/examples/jsm/postprocessing/EffectComposer.js';
-import { RenderPass } from './node_modules/three/examples/jsm/postprocessing/RenderPass.js';
-import { ShaderPass } from './node_modules/three/examples/jsm/postprocessing/ShaderPass.js';
-import Stats from './node_modules/stats.js/src/Stats.js';
+// import * as THREE from './node_modules/three/src/Three.js';
+// import { createNoise2D } from './node_modules/simplex-noise/simplex-noise.ts';
+// import { OrbitControls } from './node_modules/three/examples/jsm/controls/OrbitControls.js';
+// import { EffectComposer } from './node_modules/three/examples/jsm/postprocessing/EffectComposer.js';
+// import { RenderPass } from './node_modules/three/examples/jsm/postprocessing/RenderPass.js';
+// import { ShaderPass } from './node_modules/three/examples/jsm/postprocessing/ShaderPass.js';
+// import Stats from './node_modules/stats.js/src/Stats.js';
+import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.module.js';
+import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three@0.158.0/examples/jsm/controls/OrbitControls.js';
+import { EffectComposer } from 'https://cdn.jsdelivr.net/npm/three@0.158.0/examples/jsm/postprocessing/EffectComposer.js';
+import { RenderPass } from 'https://cdn.jsdelivr.net/npm/three@0.158.0/examples/jsm/postprocessing/RenderPass.js';
+import { ShaderPass } from 'https://cdn.jsdelivr.net/npm/three@0.158.0/examples/jsm/postprocessing/ShaderPass.js';
+import { createNoise2D } from 'https://cdn.jsdelivr.net/npm/simplex-noise@3.0.0/simplex-noise.js';
+import Stats from 'https://cdn.jsdelivr.net/npm/stats.js@0.17.0/build/stats.min.js';
+
 
 export const Loading = {
     manager: null,
