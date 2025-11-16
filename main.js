@@ -1,4 +1,4 @@
-import * as THREE from './node_modules/three';
+import * as THREE from './node_modules/three/src/Three.js';
 import { createNoise2D } from './node_modules/simplex-noise/simplex-noise.ts';
 import { OrbitControls } from './node_modules/three/examples/jsm/controls/OrbitControls.js';
 import { EffectComposer } from './node_modules/three/examples/jsm/postprocessing/EffectComposer.js';
