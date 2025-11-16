@@ -110,50 +110,50 @@ function keybinds() {}
 
 //////////////////////////// GROUND /////////////////////////////////
 
-const teres = 2048
-const tesize = 512
+// const teres = 2048
+// const tesize = 512
 
-let ground = new THREE.Mesh(
-    new THREE.PlaneGeometry(teres,teres,tesize-1,tesize-1),
-    new THREE.MeshStandardMaterial({color: 0xE6E465,side: THREE.DoubleSide})
-);
-ground.geometry.rotateX(-Math.PI/2);
-ground.position.setY(-4); 
+// let ground = new THREE.Mesh(
+//     new THREE.PlaneGeometry(teres,teres,tesize-1,tesize-1),
+//     new THREE.MeshStandardMaterial({color: 0xE6E465,side: THREE.DoubleSide})
+// );
+// ground.geometry.rotateX(-Math.PI/2);
+// ground.position.setY(-4); 
 
-const seed = 12345;
-function mulberry32(a) {
-    return function() {
-        var t = a += 0x6D2B79F5;
-        t = Math.imul(t ^ (t >>> 15), t | 1);
-        t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
-        return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
-    }
-}
-const random = mulberry32(seed);
-const simplex = createNoise2D(random);
+// const seed = 12345;
+// function mulberry32(a) {
+//     return function() {
+//         var t = a += 0x6D2B79F5;
+//         t = Math.imul(t ^ (t >>> 15), t | 1);
+//         t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+//         return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+//     }
+// }
+// const random = mulberry32(seed);
+// const simplex = createNoise2D(random);
 
-const positions = ground.geometry.attributes.position;
-for (let i = 0; i < positions.count; i++) {
-    const x = positions.getX(i);
-    const z = positions.getZ(i);
-    let noise = 0;
-    let amplitude = 1;
-    let frequency = 1;
-    let maxValue = 0;
+// const positions = ground.geometry.attributes.position;
+// for (let i = 0; i < positions.count; i++) {
+//     const x = positions.getX(i);
+//     const z = positions.getZ(i);
+//     let noise = 0;
+//     let amplitude = 1;
+//     let frequency = 1;
+//     let maxValue = 0;
 
-    for (let octave = 0; octave < 4; octave++) {
-        noise += simplex(x / 20 * frequency, z / 20 * frequency) * amplitude;
-        maxValue += amplitude;
-        amplitude *= 0.5;
-        frequency *= 2;
-    }
+//     for (let octave = 0; octave < 4; octave++) {
+//         noise += simplex(x / 20 * frequency, z / 20 * frequency) * amplitude;
+//         maxValue += amplitude;
+//         amplitude *= 0.5;
+//         frequency *= 2;
+//     }
 
-    noise /= maxValue;
-    positions.setY(i, noise * 2);
-}
+//     noise /= maxValue;
+//     positions.setY(i, noise * 2);
+// }
 
-ground.geometry.computeVertexNormals();
-scene.add(ground);
+// ground.geometry.computeVertexNormals();
+// scene.add(ground);
 
 
 //////////////////////////// POST PROCESSING /////////////////////////////////
