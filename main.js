@@ -1,14 +1,10 @@
-import * as THREE from 'three';
-import { createNoise2D } from 'simplex-noise';
-import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
-import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
-import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js';
-import Stats from 'stats.js';
-import StandardNodeLibrary from 'three/src/renderers/webgpu/nodes/StandardNodeLibrary.js';
-import { fog } from 'three/tsl';
-
-
+import * as THREE from './node_modules/three';
+import { createNoise2D } from './node_modules/simplex-noise/simplex-noise.ts';
+import { OrbitControls } from './node_modules/three/examples/jsm/controls/OrbitControls.js';
+import { EffectComposer } from './node_modules/three/examples/jsm/postprocessing/EffectComposer.js';
+import { RenderPass } from './node_modules/three/examples/jsm/postprocessing/RenderPass.js';
+import { ShaderPass } from './node_modules/three/examples/jsm/postprocessing/ShaderPass.js';
+import Stats from './node_modules/stats.js/src/Stats.js';
 
 export const Loading = {
     manager: null,
